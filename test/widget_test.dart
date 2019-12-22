@@ -12,7 +12,6 @@ import 'package:randomize/Pages/Randomizer.dart';
 import 'package:randomize/main.dart';
 
 void main() {
-
   testWidgets('Test TheRandomizerApp Composition', (WidgetTester tester) async {
     // Build app and trigger a frame.
     await tester.pumpWidget(TheRandomizerApp());
@@ -20,16 +19,19 @@ void main() {
     //Verify that the app is composed with a RandomizerHomePage is present
     final myCustomTextFieldFinder = find.byType(RandomizerHomePage);
     expect(myCustomTextFieldFinder, findsOneWidget);
-
   });
 
-  testWidgets('Test RandomizerHomePage composition', (WidgetTester tester) async {
+  testWidgets('Test RandomizerHomePage composition',
+      (WidgetTester tester) async {
     //Build home page and trigger a frame
-    await tester.pumpWidget(RandomizerHomePage());
+    await tester.pumpWidget(
+      MaterialApp(
+        home: RandomizerHomePage(),
+      ),
+    );
 
     //Verify that the homepage contain a scaffold
     final randomizerHomePageFinder = find.byType(Scaffold);
     expect(randomizerHomePageFinder, findsOneWidget);
   });
-
 }

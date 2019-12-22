@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class RandomizerHomePage extends StatefulWidget {
@@ -10,7 +11,7 @@ class RandomizerHomePageState extends State<RandomizerHomePage>{
   @override
   Widget build(BuildContext context) {
 
-    return Container();
+    return Scaffold();
   }
 
 }
