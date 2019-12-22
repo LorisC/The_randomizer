@@ -7,24 +7,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:randomize/Pages/Randomizer.dart';
 
 import 'package:randomize/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('Test TheRandomizerApp Composition', (WidgetTester tester) async {
+    // Build app and trigger a frame.
+    await tester.pumpWidget(TheRandomizerApp());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    //Verify that the app is composed with a RandomizerHomePage is present
+    final myCustomTextFieldFinder = find.byType(RandomizerHomePage);
+    expect(myCustomTextFieldFinder, findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
   });
+
+  testWidgets('Test RandomizerHomePage composition', (WidgetTester tester) async {
+    //Build home page and trigger a frame
+    await tester.pumpWidget(RandomizerHomePage());
+
+    //Verify that the homepage contain a scaffold
+    final randomizerHomePageFinder = find.byType(Scaffold);
+    expect(randomizerHomePageFinder, findsOneWidget);
+  });
+
 }

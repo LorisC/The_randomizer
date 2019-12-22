@@ -2,14 +2,16 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import 'Pages/Randomizer.dart';
 
-class MyApp extends StatelessWidget {
+void main() => runApp(TheRandomizerApp());
+
+class TheRandomizerApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'EnouApps The Randomizer',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,10 +24,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: RandomizerHomePage(),
     );
   }
 }
+
 
 class HomePage extends StatefulWidget {
   @override
