@@ -205,7 +205,6 @@ class MyList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData media = MediaQuery.of(context);
     return Column(
       children: <Widget>[
         Container(
