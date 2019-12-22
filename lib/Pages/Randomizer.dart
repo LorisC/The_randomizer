@@ -11,7 +11,9 @@ class RandomizerHomePageState extends State<RandomizerHomePage>{
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(title: Text('The Randomizer'),),
+    );
   }
 
 }

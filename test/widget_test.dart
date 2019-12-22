@@ -33,5 +33,8 @@ void main() {
     //Verify that the homepage contain a scaffold
     final randomizerHomePageFinder = find.byType(Scaffold);
     expect(randomizerHomePageFinder, findsOneWidget);
+
+    final titleFinder = find.text("The Randomizer");
+    expect(titleFinder, findsOneWidget);
   });
 }
