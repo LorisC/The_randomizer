@@ -36,5 +36,6 @@ void main() {
 
     final titleFinder = find.text("The Randomizer");
     expect(titleFinder, findsOneWidget);
+
   });
 }
