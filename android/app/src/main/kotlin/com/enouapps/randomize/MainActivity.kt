@@ -1,4 +1,4 @@
-package com.example.randomize
+package com.enouapps.randomize
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
